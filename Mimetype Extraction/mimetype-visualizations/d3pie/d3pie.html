@@ -1,0 +1,488 @@
+<html>
+<head></head>
+<body>
+
+<div id="pieChart"></div>
+
+<script src="d3.min.js"></script>
+<script src="d3pie.min.js"></script>
+<script>
+var pie = new d3pie("pieChart", {
+	"header": {
+		"title": {
+			"text": "Existing MIME Diversity",
+			"fontSize": 24,
+			"font": "open sans"
+		}
+	},
+	"footer": {
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-left"
+	},
+	"size": {
+		"canvasWidth": 2000,
+		"canvasHeight": 2000,
+		"pieOuterRadius": "50%"
+	},
+	"data": {
+		"sortOrder": "value-desc",
+		"content": [
+		  {
+			"label":"application/atom+xml",
+			"value":2984
+		  },
+		  {
+			"label":"application/dita+xml; format=concept",
+			"value":345
+		  },
+		  {
+			"label":"application/epub+zip",
+			"value":36
+		  },
+		  {
+			"label":"application/fits",
+			"value":24
+		  },
+		  {
+			"label":"application/gzip",
+			"value":2060
+		  },
+		  {
+			"label":"application/java-vm",
+			"value":1
+		  },
+		  {
+			"label":"application/msword",
+			"value":244
+		  },
+		  {
+			"label":"application/octet-stream",
+			"value":211687
+		  },
+		  {
+			"label":"application/ogg",
+			"value":26
+		  },
+		  {
+			"label":"application/pdf",
+			"value":44658
+		  },
+		  {
+			"label":"application/postscript",
+			"value":219
+		  },
+		  {
+			"label":"application/rdf+xml",
+			"value":1042
+		  },
+		  {
+			"label":"application/rss+xml",
+			"value":8894
+		  },
+		  {
+			"label":"application/rtf",
+			"value":53
+		  },
+		  {
+			"label":"application/vnd.google-earth.kml+xml",
+			"value":298
+		  },
+		  {
+			"label":"application/vnd.ms-excel",
+			"value":227
+		  },
+		  {
+			"label":"application/vnd.ms-excel.sheet.4",
+			"value":1
+		  },
+		  {
+			"label":"application/vnd.ms-htmlhelp",
+			"value":1
+		  },
+		  {
+			"label":"application/vnd.oasis.opendocument.presentation",
+			"value":1
+		  },
+		  {
+			"label":"application/vnd.oasis.opendocument.text",
+			"value":10
+		  },
+		  {
+			"label":"application/vnd.rn-realmedia",
+			"value":105
+		  },
+		  {
+			"label":"application/vnd.sun.xml.writer",
+			"value":1
+		  },
+		  {
+			"label":"application/x-7z-compressed",
+			"value":2
+		  },
+		  {
+			"label":"application/x-bibtex-text-file",
+			"value":13
+		  },
+		  {
+			"label":"application/x-bittorrent",
+			"value":3
+		  },
+		  {
+			"label":"application/x-bzip",
+			"value":6
+		  },
+		  {
+			"label":"application/x-bzip2",
+			"value":63
+		  },
+		  {
+			"label":"application/x-compress",
+			"value":44
+		  },
+		  {
+			"label":"application/x-debian-package",
+			"value":4
+		  },
+		  {
+			"label":"application/x-elc",
+			"value":324
+		  },
+		  {
+			"label":"application/x-executable",
+			"value":35
+		  },
+		  {
+			"label":"application/x-font-ttf",
+			"value":9
+		  },
+		  {
+			"label":"application/x-gtar",
+			"value":46
+		  },
+		  {
+			"label":"application/x-hdf",
+			"value":41
+		  },
+		  {
+			"label":"application/x-java-jnilib",
+			"value":5
+		  },
+		  {
+			"label":"application/x-lha",
+			"value":2
+		  },
+		  {
+			"label":"application/x-matroska",
+			"value":66
+		  },
+		  {
+			"label":"application/x-msdownload",
+			"value":72
+		  },
+		  {
+			"label":"application/x-msdownload; format=pe",
+			"value":1
+		  },
+		  {
+			"label":"application/x-msdownload; format=pe32",
+			"value":16
+		  },
+		  {
+			"label":"application/x-msmetafile",
+			"value":6
+		  },
+		  {
+			"label":"application/x-rar-compressed",
+			"value":1
+		  },
+		  {
+			"label":"application/x-rpm",
+			"value":3
+		  },
+		  {
+			"label":"application/x-sh",
+			"value":5680
+		  },
+		  {
+			"label":"application/x-shockwave-flash",
+			"value":141
+		  },
+		  {
+			"label":"application/x-sqlite3",
+			"value":1
+		  },
+		  {
+			"label":"application/x-stuffit",
+			"value":1
+		  },
+		  {
+			"label":"application/x-tar",
+			"value":37
+		  },
+		  {
+			"label":"application/x-tex",
+			"value":17
+		  },
+		  {
+			"label":"application/x-tika-msoffice",
+			"value":2809
+		  },
+		  {
+			"label":"application/x-tika-ooxml",
+			"value":1775
+		  },
+		  {
+			"label":"application/x-xz",
+			"value":11
+		  },
+		  {
+			"label":"application/xhtml+xml",
+			"value":385751
+		  },
+		  {
+			"label":"application/xml",
+			"value":21000
+		  },
+		  {
+			"label":"application/xslt+xml",
+			"value":7
+		  },
+		  {
+			"label":"application/zip",
+			"value":3762
+		  },
+		  {
+			"label":"audio/basic",
+			"value":54
+		  },
+		  {
+			"label":"audio/mp4",
+			"value":18
+		  },
+		  {
+			"label":"audio/mpeg",
+			"value":646
+		  },
+		  {
+			"label":"audio/vorbis",
+			"value":5
+		  },
+		  {
+			"label":"audio/x-aiff",
+			"value":10
+		  },
+		  {
+			"label":"audio/x-flac",
+			"value":2
+		  },
+		  {
+			"label":"audio/x-mpegurl",
+			"value":1
+		  },
+		  {
+			"label":"audio/x-ms-wma",
+			"value":55
+		  },
+		  {
+			"label":"audio/x-wav",
+			"value":59
+		  },
+		  {
+			"label":"image/gif",
+			"value":40049
+		  },
+		  {
+			"label":"image/jpeg",
+			"value":85879
+		  },
+		  {
+			"label":"image/png",
+			"value":37997
+		  },
+		  {
+			"label":"image/svg+xml",
+			"value":342
+		  },
+		  {
+			"label":"image/tiff",
+			"value":477
+		  },
+		  {
+			"label":"image/vnd.adobe.photoshop",
+			"value":4
+		  },
+		  {
+			"label":"image/vnd.dwg",
+			"value":3
+		  },
+		  {
+			"label":"image/vnd.microsoft.icon",
+			"value":1570
+		  },
+		  {
+			"label":"image/x-bpg",
+			"value":7
+		  },
+		  {
+			"label":"image/x-ms-bmp",
+			"value":59
+		  },
+		  {
+			"label":"image/x-xcf",
+			"value":1
+		  },
+		  {
+			"label":"message/rfc822",
+			"value":182
+		  },
+		  {
+			"label":"message/x-emlx",
+			"value":1
+		  },
+		  {
+			"label":"text/html",
+			"value":739588
+		  },
+		  {
+			"label":"text/plain",
+			"value":137335
+		  },
+		  {
+			"label":"text/troff",
+			"value":2
+		  },
+		  {
+			"label":"text/x-diff",
+			"value":1
+		  },
+		  {
+			"label":"text/x-jsp",
+			"value":3
+		  },
+		  {
+			"label":"text/x-perl",
+			"value":14
+		  },
+		  {
+			"label":"text/x-php",
+			"value":25
+		  },
+		  {
+			"label":"text/x-python",
+			"value":5
+		  },
+		  {
+			"label":"text/x-vcard",
+			"value":19
+		  },
+		  {
+			"label":"video/mp4",
+			"value":675
+		  },
+		  {
+			"label":"video/mpeg",
+			"value":255
+		  },
+		  {
+			"label":"video/quicktime",
+			"value":954
+		  },
+		  {
+			"label":"video/x-flv",
+			"value":13
+		  },
+		  {
+			"label":"video/x-m4v",
+			"value":203
+		  },
+		  {
+			"label":"video/x-ms-asf",
+			"value":26
+		  },
+		  {
+			"label":"video/x-ms-wmv",
+			"value":139
+		  },
+		  {
+			"label":"video/x-msvideo",
+			"value":96
+		  },
+		  {
+			"label":"xscapplication/zip",
+			"value":85
+		  }
+		]
+	},
+	"labels": {
+		"outer": {
+			"format" : "label",
+			"pieDistance": 500,
+			"hideWhenLessThanPercentage": 3
+		},
+		"inner": {
+			"hideWhenLessThanPercentage": 3
+		},
+		"mainLabel": {
+			"fontSize": 11
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"decimalPlaces": 2
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 11
+		},
+		"lines": {
+			"enabled": true,
+			"style": "curved"
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear"
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 100
+		},
+		"canvasPadding": {
+			"top": 5,
+			"right": 5,
+			"bottom": 5,
+			"left": 5
+		}
+	},
+	"callbacks": {
+		"onClickSegment": function(context){
+			//console.log(context.index);
+			var pc = document.getElementById("p0_segmentPercentage"+context.index+"-inner").textContent;
+			pc = Math.round(pc.substring(0,pc.length-1));
+			if(!context.expanded){
+				var lg = document.getElementsByClassName("p0_lineGroups")[0].childNodes[context.index].childNodes[0];
+				lg.style["opacity"] = 1;
+				var lb = document.getElementsByClassName("p0_labels-outer")[0].childNodes[context.index];
+				lb.style["opacity"] = 1;
+			}
+			else{
+				if(pc < 4){
+					var lg = document.getElementsByClassName("p0_lineGroups")[0].childNodes[context.index].childNodes[0];
+					lg.style["opacity"] = 0;
+					var lb = document.getElementsByClassName("p0_labels-outer")[0].childNodes[context.index];
+					lb.style["opacity"] = 0;
+				}
+			}
+		}
+	}
+});
+</script>
+<script>setTimeout(function() {window.scrollTo(window.innerHeight/2,window.innerWidth/2); }, 1);</script>
+</body>
+</html>

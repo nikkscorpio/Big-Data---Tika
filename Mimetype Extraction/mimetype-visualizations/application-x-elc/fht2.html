@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://bl.ocks.org/bewest/raw/5075497/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<style>
+
+svg {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+</style>
+</head><body>
+
+<script src="d3.v3.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script>
+
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = 1200 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
+
+//var x = d3.time.scale()
+var x = d3.scale.linear( )
+    .domain([0, 255])
+    .rangeRound([0, width])
+    ;
+
+var y = d3.scale.linear()
+    .domain([0, 8])
+    .rangeRound([height, 0]);
+
+var z = d3.scale.linear()
+    .domain([0, 0.001])
+    .range(["pink", "red"])
+    .interpolate(d3.interpolateLab);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+    .tickValues(d3.range(0,255,5))
+	.tickFormat(d3.format("d"));
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+	.tickValues(d3.range(0,16,1))
+    .tickFormat(d3.format("d"));
+	
+var tip = d3.tip()
+ .attr('class', 'd3-tip')
+ .offset([-10, 0])
+ .html(function(d) {
+   return "<strong>Byte:"+Math.round((((this.x.baseVal.value)*255)/width))+"and Value:"+ d + "</strong>";
+ })
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+svg.call(tip);
+
+d3.json("FHT_Results_H2.json", function(error, data) {
+
+  var glucose = svg.selectAll(".glucose")
+      .data(data)
+    .enter( ).append("g")
+      .attr("class", "glucose")
+      ;
+  glucose.selectAll(".bin")
+      .data(function (d) { return d.values; })
+	  .enter( ).append("rect")
+      .attr("class", "bin")
+      .attr("x", function (d, i) { return x(i); })
+      .attr("width", function (d, i) { return  x(i+1) - x(i); })
+      .style("fill", function(d) { return z(d); })
+	  .on('mouseover', tip.show)
+	  .on('mouseout', tip.hide);
+  glucose.each(function (d) {
+    d3.select(this).selectAll(".bin")
+        .attr("y", y(d.key) )
+        .attr("height", 11 );
+  });
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + (height+10) + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
+	  
+});
+
+</script></body></html>

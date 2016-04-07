@@ -1,0 +1,156 @@
+yœ{
+  "url" : "http://169.237.140.1/calludt.cgi/GRANTSSEARCH?FUNDTYPE=Exoticpests",
+  "timestamp" : null,
+  "request" : {
+    "method" : "GET",
+    "client" : {
+      "hostname" : "nsfpolardata.dyndns.org",
+      "address" : "54.183.226.231",
+      "software" : "Nutch-1.10-SNAPSHOT",
+      "robots" : "CLASSIC",
+      "contact" : {
+        "name" : "",
+        "email" : ""
+      }
+    },
+    "headers" : [ [ "Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" ], [ "Accept-Encoding", "" ], [ "Accept-Language", "en-us,en-gb,en;q=0.7,*;q=0.3" ], [ "User-Agent", "" ] ],
+    "body" : null
+  },
+  "response" : {
+    "status" : "",
+    "server" : {
+      "hostname" : "169.237.140.1",
+      "address" : ""
+    },
+    "headers" : [ [ "Content-Encoding", "" ], [ "Content-Type", "text/html" ], [ "Date", "1424621728000" ], [ "Server", "Apache/2.0.58  HP-UX_Apache-based_Web_Server (Unix) DAV/2 PHP/4.3.8" ], [ "nutch.crawl.score", "2.1433468E-15" ], [ "_fst_", "33" ], [ "nutch.segment.name", "20150222075204" ], [ "Connection", "close" ] ],
+    "body" : "   \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n \n    \n    
+\n     
+
+ \n      	 \n       \n       \n        \n        \n       \n      
+
+\n     \n    \n\n    
+\n     
+
+ \n      	 \n         \n           UC IPM Home\n         
+\n          \n\n\n         \n     \n     \n\n     \n         \n\n 
+\n	HOME
+
+\n	SEARCH\n 
+
+\n\n     \n     \n       \n     \n       \n     \n     \n    \n     \n    \n     \n    \n     \n
+\n    \n	ON THIS SITE
+
+\n\n	What is IPM?\n
+
+\n\n	Home & landscape pests
+
+\n\n	Agricultural pests
+
+\n\n	Natural environment pests
+
+\n\n	Exotic & invasive pests
+
+\n\n	Weed gallery
+
+\n\n	Natural enemies gallery
+
+\n\n	Weather, models & degree-days
+
+\n\n	Pesticide information\n
+
+\n\n	Research\n
+
+\n\n	Publications\n
+
+\n\n	Events & training\n
+
+\n\n\n	Links\n
+
+\n\n	Glossary\n
+
+\n\n	About us\n
+
+\n\n	Contact us\n
+
+\n \n
+\n\n         
+\n         \n         \n      
+
+\n      	 \n          
+\n      
+
+\n      	\n    \n    \n      \n      \n       \n      Research and IPM
+\n\t  Grants Programs: Projects Database
+\n\t  \n\t  
+\n        
+
+
+ \n          	 \n            | About the database\n            | Grants programs\n   \t\t    |
+
+\n        \n      \n\n      Search for research projects on a topic
+\n\t  Information on projects funded by UC IPM since 1979 is stored in this database. You may search for\n\t  \tany combination of hosts, pests, disciplines, and principal  investigators, for any range of\n\t\tfunding year and by research program (Exotic Pests, UC IPM, or both). You'll be presented with\n\t\tdetails of all projects meeting the search criteria.
+\n\t\t\t\n  
+\n    
+
+\n\t\t	\n\t\t\tSimple search
+\n\t\t
+
+\n\t\n    \n  \n     \n    
+\n      	\n        Keyword\n      
+\n      	\n        \n      	\n        \n        \n      \n    \n    
+\n  
+\n\n  
+\n    
+
+\n\t\t	\n\t\t\tSpecific variable search: Set one or more search criteria
+\n\t\t
+
+\n\t\n  \n  To use, type the exact word or phrase (such as \"cotton\" under \"host\" or \"aphid\" under \"pest\") in the\n  appropriate box(es). You may also click on any of the \"list\" links, then click on a name to select it.\n  You'll be returned to this screen and your selection will automatically appear in the appropriate box.
+  \n\n  \n\t\t\n  
+\n   
+\n      	\n         Host/habitat \n      \n      	\n         
+\n              Contains\n              
+Does not contain\n            
+
+\n      	\n         \n      	\n           List of hosts\n      \n   
+\n      	\n         Pest\n      \n      	\n         
+\n              Contains\n              
+Does not contain\n            
+
+\n      	\n         \n      	\n           List of pests\n      \n   
+\n      	\n         Discipline \n      \n      	\n         
+\n              Contains\n              
+Does not contain\n            
+
+\n      	\n         \n      	\n           List of disciplines\n      \n   
+\n      	\n         Year(s) funded\n      \n      	\n         From: \n       
+\n          \n      \n      	\n         To: \n         
+\n          \n         \n      
+	 \n         \n      	 \n         \n      \n   
+\n      	\n         Principal investigator\n      \n      	\n         
+\n              Contains\n              
+Begins with\n              
+Is exactly\n              
+Does not contain\n            
+
+\n      	\n         \n      
+	\n         \n            List of principal investigators\n      
+\n   
+\n      	\n         Research Program\n      \n      	\n         
+\n        \n        \n      	 \n         \n      	 \n         \n      \n  \n\n  \n    \n    \n  
+\n  
+\n         \n       \n  \n      \n     \n    \n     \n      
+\n     Statewide IPM Program, Agriculture and Natural Resources, University of California
+\n       All contents copyright ï¿½ \n       \n      2015\n       The Regents of the University of California. All rights reserved.\n     
+\n\n\n\nFor noncommercial purposes only, any Web site may link directly to this page. FOR ALL OTHER USES or more information, read Legal Notices. Unfortunately, we cannot provide individual solutions to specific pest problems. See our Home page, or in the U.S., contact your local Cooperative Extension office for assistance.
+\n    \n    Acknowledgements\n    Staff-only pages\n    Subscribe (RSS)\n\n    Contact UC IPM
+\n    
+ \n\nAgriculture and Natural Resources, University of California
+\n\n\t©  Regents of the University of California\n    Division of Agriculture and Natural Resources\n    Nondiscrimination Statement\n    
+\n   \n    Accessibility  \n\n      web template revised: February 22, 2015\n      Contact webmaster. \n   
+
+\n \n\n"
+  },
+  "key" : "1_140_237_169_844d214f44d55c90fe40b039d95dd156f1ad5b4b_1424621728000",
+  "imported" : "1424621728000"
+}ÿ
