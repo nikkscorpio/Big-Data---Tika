@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="d3.layout.cloud.js"></script>
+<head>
+    <title>SWEET Concepts Cloud </title>
+</head>
+<style>
+    body {
+        font-family:"Lucida Grande","Droid Sans",Arial,Helvetica,sans-serif;
+    }
+    .legend {
+        border: 1px solid #555555;
+        border-radius: 5px 5px 5px 5px;
+        font-size: 0.8em;
+        margin: 10px;
+        padding: 8px;
+    }
+    .bld {
+        font-weight: bold;
+    }
+</style>
+<body>
+
+</body>
+<script>
+// Solr Query
+//http://localhost:8983/solr/sample/select?q=Sweet_Concepts%3A%5B*+TO+*%5D&rows=1111&fl=Sweet_Concepts&wt=json&indent=true
+    var frequency_list = [{"text":"type", "size":  3707},
+{"size":  2914  ,"text":" name  "},
+{"size":  2897  ,"text":" element "},
+{"size":  2363  ,"text":" search  "},
+{"size":  2348  ,"text":" event "},
+{"size":  2228  ,"text":" content "},
+{"size":  1902  ,"text":" image "},
+{"size":  1850  ,"text":" color "},
+{"size":  1825  ,"text":" length  "},
+{"size":  1710  ,"text":" time  "},
+{"size":  1700  ,"text":" ha  "},
+{"size":  1669  ,"text":" filter  "},
+{"size":  1451  ,"text":" service "},
+{"size":  1390  ,"text":" state "},
+{"size":  1212  ,"text":" node  "},
+{"size":  1190  ,"text":" top "},
+{"size":  1188  ,"text":" resource  "},
+{"size":  1172  ,"text":" car "},
+{"size":  1171  ,"text":" set "},
+{"size":  1160  ,"text":" boulder "},
+{"size":  1120  ,"text":" science "},
+{"size":  1113  ,"text":" sweet "},
+{"size":  1113  ,"text":" concepts  "},
+{"size":  1011  ,"text":" load  "},
+{"size":  970 ,"text":" map "},
+{"size":  891 ,"text":" data  "},
+{"size":  865 ,"text":" navigation  "},
+{"size":  807 ,"text":" age "},
+{"size":  800 ,"text":" star  "},
+{"size":  795 ,"text":" group "},
+{"size":  795 ,"text":" encoding  "},
+{"size":  782 ,"text":" weather "},
+{"size":  749 ,"text":" header  "},
+{"size":  722 ,"text":" l "},
+{"size":  721 ,"text":" count "},
+{"size":  719 ,"text":" health  "},
+{"size":  698 ,"text":" key "},
+{"size":  670 ,"text":" research  "},
+{"size":  653 ,"text":" space "},
+{"size":  649 ,"text":" agent "},
+{"size":  637 ,"text":" face  "},
+{"size":  632 ,"text":" center  "},
+{"size":  615 ,"text":" variable  "},
+{"size":  611 ,"text":" cap "},
+{"size":  600 ,"text":" base  "},
+{"size":  582 ,"text":" height  "},
+{"size":  579 ,"text":" feed  "},
+{"size":  573 ,"text":" arc "},
+{"size":  493 ,"text":" unit  "},
+{"size":  492 ,"text":" array "},
+{"size":  485 ,"text":" climate "},
+{"size":  466 ,"text":" policy  "},
+{"size":  464 ,"text":" field "},
+{"size":  458 ,"text":" wind  "},
+{"size":  455 ,"text":" mode  "},
+{"size":  450 ,"text":" bar "},
+{"size":  447 ,"text":" change  "},
+{"size":  444 ,"text":" error "},
+{"size":  436 ,"text":" day "},
+{"size":  434 ,"text":" pdf "},
+{"size":  429 ,"text":" size  "},
+{"size":  423 ,"text":" copyright "},
+{"size":  422 ,"text":" work  "},
+{"size":  421 ,"text":" path  "},
+{"size":  412 ,"text":" free  "},
+{"size":  385 ,"text":" window  "},
+{"size":  382 ,"text":" product "},
+{"size":  373 ,"text":" phone "},
+{"size":  372 ,"text":" network "},
+{"size":  370 ,"text":" description "},
+{"size":  360 ,"text":" file  "},
+{"size":  340 ,"text":" system  "},
+{"size":  340 ,"text":" attribute "},
+{"size":  336 ,"text":" tube  "},
+{"size":  318 ,"text":" range "},
+{"size":  317 ,"text":" value "},
+{"size":  317 ,"text":" sum "},
+{"size":  317 ,"text":" local "},
+{"size":  316 ,"text":" component "},
+{"size":  312 ,"text":" development "},
+{"size":  303 ,"text":" technology  "},
+{"size":  303 ,"text":" environment "},
+{"size":  302 ,"text":" index "},
+{"size":  295 ,"text":" container "},
+{"size":  293 ,"text":" access  "},
+{"size":  292 ,"text":" source  "},
+{"size":  279 ,"text":" archive "},
+{"size":  277 ,"text":" bank  "},
+{"size":  276 ,"text":" area  "},
+{"size":  271 ,"text":" austral "},
+{"size":  270 ,"text":" project "}];
+
+
+    var color = d3.scale.linear()
+            .domain([0,1,2,3,4,5,600,1000,2000,3000,4000])
+            .range(["#ddd", "#ccc", "#bbb", "#aaa", "#999", "#888", "#777", "#666", "#555", "#444", "#333", "#222"]);
+
+    d3.layout.cloud().size([800, 300])
+            .words(frequency_list)
+            .rotate(0)
+            .fontSize(function(d) { return d.size/40; })
+            .on("end", draw)
+            .start();
+
+    function draw(words) {
+        d3.select("body").append("svg")
+                .attr("width", 850)
+                .attr("height", 350)
+                .attr("class", "wordcloud")
+                .append("g")
+                // without the transform, words words would get cutoff to the left and top, they would
+                // appear outside of the SVG area
+                .attr("transform", "translate(320,200)")
+                .selectAll("text")
+                .data(words)
+                .enter().append("text")
+                .style("font-size", function(d) { return d.size + "px"; })
+                .style("fill", function(d, i) { return color(i); })
+                .attr("transform", function(d) {
+                    return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                })
+                .text(function(d) { return d.text; });
+    }
+</script>
+
+<div style="width: 40%;">
+    <div class="legend">
+        Commonly used SWEET concepts are larger and slightly faded in color.  Less common concepts are smaller and darker.
+    </div>
+
+</div>
+
+
+</html>

@@ -1,0 +1,8 @@
+edu/usc/polar/ScholarAPI.class
+edu/usc/polar/URLShortener.class
+edu/usc/polar/GrobidParser.class
+edu/usc/polar/MetadataEvaluator.class
+edu/usc/polar/SWEETParser.class
+edu/usc/polar/GeotopicParser.class
+edu/usc/polar/TagRatioParser.class
+edu/usc/polar/ContentAnalysis.class
